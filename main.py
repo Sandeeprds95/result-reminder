@@ -6,7 +6,7 @@ import urllib.request, time, webbrowser, os
 BASE_URL = "http://www.srmuniv.ac.in/Announcements"
 RESULT_URL = "http://www.srmuniv.ac.in/"
 chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
-music_path = 'F:/Songs/English/siren.mp3'
+music_path = 'G:/version-control/result-reminder/sounds/siren.mp3'
 
 keywords = ['Results', 'E&T', 'B.Tech', '7th', 'Semester', '2012']
 
