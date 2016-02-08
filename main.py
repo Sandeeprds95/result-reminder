@@ -9,7 +9,7 @@ RESULT_URL = "http://www.srmuniv.ac.in/"
 chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
 music_path = 'G:/version-control/result-reminder/sounds/siren.mp3'
 
-keywords = ['Results', 'E&T', 'B.Tech', '7th', 'Semester', '2012']
+keywords = ['Results', 'E&T', 'B.Tech', '5th', 'Semester', '2013']
 
 def checkForSem(heading):
     if all(key in heading for key in keywords):
