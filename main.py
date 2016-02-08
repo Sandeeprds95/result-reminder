@@ -2,7 +2,9 @@
 
 from bs4 import BeautifulSoup
 import urllib.request
-import time, webbrowser, os
+import time
+import webbrowser
+import os
 
 BASE_URL = "http://www.srmuniv.ac.in/Announcements"
 RESULT_URL = "http://www.srmuniv.ac.in/"
@@ -25,14 +27,14 @@ def main():
         content_heading = heading.find('h4').get_text()
         page_url = heading.find('a')['href']
         print(RESULT_URL + page_url)
-        results_out = checkForSem(content_heading)
-        print("results: " + str(results_out))
+        results_out = checkForSem(str(content_heading))
+        print("result: " + str(results_out))
         print(content_heading)
         if results_out:
+            webbrowser.get(chrome_path).open(RESULT_URL + page_url)
             while True:
                 os.startfile(music_path)
                 time.sleep(10)
-            webbrowser.get(chrome_path).open(RESULT_URL + page_url)
             break
 
 while True:
