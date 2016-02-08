@@ -1,7 +1,8 @@
 #Scraping SRM University's main web page to check if the results have been declared or not.
 
 from bs4 import BeautifulSoup
-import urllib.request, time, webbrowser, os
+import urllib.request
+import time, webbrowser, os
 
 BASE_URL = "http://www.srmuniv.ac.in/Announcements"
 RESULT_URL = "http://www.srmuniv.ac.in/"
@@ -28,10 +29,12 @@ def main():
         print("results: " + str(results_out))
         print(content_heading)
         if results_out:
-            os.startfile(music_path)
+            while True:
+                os.startfile(music_path)
+                time.sleep(10)
             webbrowser.get(chrome_path).open(RESULT_URL + page_url)
             break
-    time.sleep(2)
 
-
-main()
+while True:
+    main()
+    time.sleep(600)
