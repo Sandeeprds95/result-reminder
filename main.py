@@ -1,4 +1,4 @@
-#Scraping SRM University's main web page to check if the results have been declared or not.
+#Scraping SRM University's main web page to check if the results have been declared for 3rd year UnderGrad students.
 
 from bs4 import BeautifulSoup
 import urllib.request
@@ -14,10 +14,7 @@ music_path = 'G:/version-control/result-reminder/sounds/siren.mp3'
 keywords = ['Results', 'E&T', 'B.Tech', '5th', 'Semester', '2013']
 
 def checkForSem(heading):
-    if all(key in heading for key in keywords):
-        return True
-    else:
-        return False
+    return True if(all(key in heading for key in keywords)) else False
 
 def main():
     url = urllib.request.urlopen(BASE_URL)
